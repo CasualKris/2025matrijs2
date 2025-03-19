@@ -35,7 +35,7 @@
 
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['send'])) {
-            $to = "concept.com";
+            $to = "text.com";
             $subject = "New Message from Website";
             $message = htmlspecialchars($_POST['message']);
             $headers = "From: no-reply@yourwebsite.com\r\n";
