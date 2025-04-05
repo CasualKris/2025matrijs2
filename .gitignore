@@ -1,1 +1,6 @@
 fonts/
+
+# .gitignore
+
+# Ignore the configuration file
+config.php

@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-    </head>
-    <body>
-        <header>
-            <div id="mainImg"><img href="../img/hero.png"></div>
-            <nav class="navbar">
-                <div class="logo">Website</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="zhinengQigong.html">Zhineng Qigong</a></li>
-                    <li><a href="over.html">Over Mij</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-                <div class="menu-toggle" onclick="toggleMenu()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </nav>
-        
-        </header>
-        <main id="mainPage">
-            <div class="box">
-                <h2>Titel</h2>
-                <p>Hier komt tekst.</p>
-                <button>Less Meer</button>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Website</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="zhinengQigong.html">Zhineng Qigong</a></li>
+                <li><a href="over.html">Over Mij</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+            <!-- Hamburger menu -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-            <div class="box">
+        </nav>
+        <div id="mainImg">
+            <img src="../img/hero.png" alt="Hero Image">
+        </div>
+    </header>
+    <!-- For the intro -->
+    <section class="intro-section">
+        <div class="title-decoration"></div> <!-- The small rectangle on the left of the title -->
+        <section id="intro">
+            <h1>Welcome to Our Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum augue erat, ac consequat arcu
+                venenatis ut. Curabitur ullamcorper vulputate augue, vitae posuere erat placerat facilisis. Vestibulum
+                quis varius nisl, sed lacinia metus. Mauris facilisis tempus pharetra. Etiam dictum pellentesque lectus
+                id elementum.</p>
+        </section>
+    </section>
+
+    <main id="mainPage">
+
+
+        <!-- Box content -->
+        <div class="box">
+            <div>
                 <h2>Titel</h2>
-                <p>Hier komt tekst.</p>
-                <button>Less Meer</button>
+                <p>Praesent id massa quis ligula luctus luctus vel dapibus lacus. Vivamus in laoreet elit...</p>
             </div>
-            <div class="box">
+            <button>Less Meer</button>
+        </div>
+        <div class="box">
+            <div>
                 <h2>Titel</h2>
-                <p>Hier komt tekst.</p>
-                <button>Less Meer</button>
+                <p>Praesent id massa quis ligula luctus luctus vel dapibus lacus. Vivamus in laoreet elit...</p>
             </div>
-        </main>
-        <footer>
-            <p>@copyright all rights reserved et cetera.</p>
-        </footer>
-    </body>
+            <button>Less Meer</button>
+        </div>
+        <div class="box">
+            <div>
+                <h2>Titel</h2>
+                <p>Praesent id massa quis ligula luctus luctus vel dapibus lacus. Vivamus in laoreet elit...</p>
+            </div>
+            <button>Less Meer</button>
+        </div>
+    </main>
+    <footer>
+        <p>@copyright all rights reserved et cetera.</p>
+    </footer>
+</body>
+
 </html>

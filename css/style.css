@@ -15,17 +15,43 @@
     font-style: normal;
 }
 
-main {
-    background-color: #F5F5F5;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #EDEDE9; 
+}
+
+main {
+    flex: 1;
+}
+
+#mainImg {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+#mainImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #333;
-    color: white;
+    height: 60px;
+    color: rgb(68, 68, 68);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,14 +79,15 @@ main {
     font-size: 16px;
     padding: 8px 12px;
     transition: 0.3s;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
 .nav-links a:hover {
-    background: #555;
+    background: #cbc0b5;
     border-radius: 5px;
 }
 
-/* HAMBURGER MENU (for mobile) */
+/* HAMBURGER MENU */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -73,32 +100,6 @@ main {
     background: white;
     margin: 4px;
     transition: 0.3s;
-}
-
-/* RESPONSIVE NAVBAR */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        background: #333;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
 }
 
 footer {
@@ -124,22 +125,67 @@ p {
     font-size: 12px;
 }   
 
-/* Hoofdpagina */
 #mainPage {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch; 
     gap: 20px;
     padding: 20px;
 }
 
-.box {
+.intro-section {
+    position: relative;
+    left: 25%;
+    display: flex;
+    align-items: flex-start; /* Align to the top of the container */
+    margin: 50px 0px;
     padding: 20px;
+    border-radius: 8px;
+}
+
+.intro-section .title-decoration {
+    width: 8px;
+    height: 40px;
+    background-color: #D2867A; /* Color of the rectangle decor */
+    margin-right: 20px;
+}
+
+#intro h1 {
+    font-family: 'Acari-Sans-Medium';
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; 
+}
+
+#intro p {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px; 
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 10px;
+    max-width: 800px; 
+}
+
+/* The boxes on Index.html */
+
+.box {
+    padding: 30px 20px;
+    min-height: 220px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Adds space between boxes */
 }
 
 .box h2 {
@@ -163,15 +209,15 @@ p {
 }
 
 .box:nth-child(1) {
-    background-color: #C59686; 
+    background-color: #C59686;
 }
 
 .box:nth-child(2) {
-    background-color: #D2867A; 
+    background-color: #D2867A;
 }
 
 .box:nth-child(3) {
-    background-color: #D39560; 
+    background-color: #D39560;
 }
 
 /* contact pagina */
@@ -202,11 +248,79 @@ p {
     #mainPage {
         flex-direction: row;
         justify-content: center;
+        align-items: stretch; /* Ensures equal height rows */
     }
 
     .box {
         width: 30%;
+        height: auto;
     }
+
+    .navbar {
+        background: rgba(214, 204, 194, 0.25); 
+    }
+
+
 }
 
+/* RESPONSIVE MOBILE */
+@media (max-width: 767.98px) {
+    main {
+        margin-top: 0px;
+    }
 
+    /* Bigger boxes on phone */
+    .box {
+        width: 100%;
+        max-width: none;
+        min-height: 400px;
+        padding: 40px 25px;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .box h2 {
+        font-size: 36px;
+    }
+
+    .box p {
+        font-size: 22px;
+    }
+
+    .box button {
+        font-size: 22px;
+        padding: 12px 20px;
+    }
+
+    .navbar {
+        background: rgba(214, 204, 194, 1); 
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #D6CCC2;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hide hero image on mobile */
+    #mainImg {
+        display: none;
+    }
+}

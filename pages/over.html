@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-    </head>
-    <body>
-        <header>
-            <div id="navImg"><img href="../img/"></div>
-            <nav>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/over.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Website</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="zhinengQigong.html">Zhineng Qigong</a></li>
                 <li><a href="over.html">Over Mij</a></li>
                 <li><a href="contact.php">Contact</a></li>
-            </nav>
-        </header>
-        <main>
-            <div id="contactBox">
-                <div>
-                    <img href="test">
-                        <div>
-                        <h1>Titel</h1>
-                        <h6>text</h6>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur vel deserunt architecto corporis aspernatur recusandae similique minima, natus dolores, illum corrupti accusantium nisi totam deleniti libero harum mollitia quibusdam quos.</p>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </main>
-        <footer>
-            <p>@copyright all rights reserved et cetera.</p>
-        </footer>
-    </body>
+        </nav>
+    </header>
+
+    <main>
+        <div id="contactBox">
+            <!-- Top Part: Name, Info, and Image -->
+            <div class="contact-top">
+                <div class="contact-left">
+                    <h1>My Name</h1>
+                    <ul>
+                        <li>Phone: +1 234 567 890</li>
+                        <li>Email: contact@example.com</li>
+                        <li>Extra info: Extra</li>
+                        <li>Extra info: Extra</li>
+                        <li>Extra info: Extra</li>
+                    </ul>
+                </div>
+                <div class="contact-right">
+                    <img src="../img/box1.png" alt="Contact Image">
+                </div>
+            </div>
+
+            <!-- Bottom Part: Extra Text -->
+            <div id="contact-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vel deserunt architecto corporis
+                    aspernatur recusandae similique minima, natus dolores, illum corrupti accusantium nisi totam
+                    deleniti libero harum mollitia quibusdam quos. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vel deserunt architecto corporis
+                    aspernatur recusandae similique minima, natus dolores, illum corrupti accusantium nisi totam
+                    deleniti libero harum mollitia quibusdam quos. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; All rights reserved et cetera.</p>
+    </footer>
+</body>
+
 </html>

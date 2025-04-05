@@ -1,28 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-    </head>
-    <body>
-        <header>
-            <div id="navImg"><img href="../img/"></div>
-            <nav>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/popup.css" />
+    <script src="../js/script.js"></script>
+    <script defer src="../js/popup.js"></script> 
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Website</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="zhinengQigong.html">Zhineng Qigong</a></li>
                 <li><a href="over.html">Over Mij</a></li>
                 <li><a href="contact.php">Contact</a></li>
-            </nav>
-        </header>
-        <main>
-            <div></div>
-            <script></script>
-        </main>
-        <footer>
-            <p>@copyright all rights reserved et cetera.</p>
-        </footer>
-    </body>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Clickable Boxes -->
+        <div class="clickable-box" data-title="Title 1" data-description="This is some description text for the first box."
+            data-image="box1.png" data-popup="popup1">
+            <div class="content">
+                <h3>Title 1</h3>
+                <p>This is some description text for the first box.</p>
+            </div>
+            <img src="../img/box1.png" alt="Image 1" />
+        </div>
+
+        <div class="clickable-box" data-title="Title 2" data-description="This is some description text for the second box."
+            data-image="box2.png" data-popup="popup2">
+            <div class="content">
+                <h3>Title 2</h3>
+                <p>This is some description text for the second box.</p>
+            </div>
+            <img src="../img/box2.png" alt="Image 2" />
+        </div>
+
+        <div class="clickable-box" data-title="Title 3" data-description="This is some description text for the third box."
+            data-image="box3.png" data-popup="popup3">
+            <div class="content">
+                <h3>Title 3</h3>
+                <p>This is some description text for the third box.</p>
+            </div>
+            <img src="../img/box3.png" alt="Image 3" />
+        </div>
+
+        <div class="clickable-box" data-title="Title 4" data-description="This is some description text for the fourth box."
+            data-image="box4.png" data-popup="popup4">
+            <div class="content">
+                <h3>Title 4</h3>
+                <p>This is some description text for the fourth box.</p>
+            </div>
+            <img src="../img/box4.png" alt="Image 4" />
+        </div>
+
+        <!-- Popups -->
+        <div class="popup" id="popup1">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <div class="popup-text">
+                    <h3>Popup Title 1</h3> 
+                    <p>a</p> 
+                    <button onclick="closePopup('popup1')">Close</button>
+                </div>
+                <img class="popup-image" src="../img/box1.png" alt="Popup Image" />
+            </div>
+        </div>
+
+        <div class="popup" id="popup2">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <div class="popup-text">
+                    <h3>Popup Title 2</h3> 
+                    <p>This is a different description text for the second box's popup.</p> 
+                    <button onclick="closePopup('popup2')">Close</button>
+                </div>
+                <img class="popup-image" src="../img/box2.png" alt="Popup Image" />
+            </div>
+        </div>
+
+        <div class="popup" id="popup3">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <div class="popup-text">
+                    <h3>Popup Title 3</h3> 
+                    <p>This is a different description text for the third box's popup.</p> 
+                    <button onclick="closePopup('popup3')">Close</button>
+                </div>
+                <img class="popup-image" src="../img/box3.png" alt="Popup Image" />
+            </div>
+        </div>
+
+        <div class="popup" id="popup4">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <div class="popup-text">
+                    <h3>Popup Title 4</h3> 
+                    <p>This is a different description text for the fourth box's popup.</p> 
+                    <button onclick="closePopup('popup4')">Close</button>
+                </div>
+                <img class="popup-image" src="../img/box4.png" alt="Popup Image" />
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; All rights reserved et cetera.</p>
+    </footer>
+</body>
+
 </html>
- 
